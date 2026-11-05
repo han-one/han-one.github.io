@@ -3,165 +3,177 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0c0f">
+<meta name="theme-color" content="#fbf9f4">
 <title>Kelly Hanil – Développeur, créateur de contenu, coach</title>
 <meta name="description" content="Portfolio de Kelly Tshinefu Nsio Hanil, Kinshasa : développement web et mobile, community management, graphisme et vidéo, coaching, conseil digital, traduction.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <style>
-:root{--bg:#0b0c0f;--s1:#121419;--s2:#181b21;--line:rgba(236,238,243,.09);--line2:rgba(236,238,243,.18);--t1:#eceef3;--t2:#a3a9b7;--t3:#6d7383;--acc:#f5b400;--ink:#0b0c0f;--mono:'Geist Mono',ui-monospace,Menlo,monospace;--ease:cubic-bezier(.2,.6,.2,1)}
-*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font:400 17px/1.65 Geist,system-ui,sans-serif;background:var(--bg);color:var(--t1);-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-weight:500;line-height:1.1}
-a{color:inherit}
-a:focus-visible,button:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+:root{--bg:#fbf9f4;--s1:#fff;--s2:#f3efe6;--ink:#0f1330;--t2:#4b5170;--t3:#6b708a;--line:rgba(15,19,48,.1);--line2:rgba(15,19,48,.2);--acc:#ffc400;--blue:#1f4fd8;--mono:'Geist Mono',ui-monospace,Menlo,monospace;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box;margin:0}html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:72px}
+body{font:400 17px/1.65 Geist,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-weight:500;line-height:1.08}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.k{font:400 13px/1 var(--mono);color:var(--t3);margin-bottom:16px}.k b{color:var(--acc);font-weight:500;margin-right:8px}
-section{padding:112px 0}
-h2{font-size:clamp(32px,4.4vw,44px);letter-spacing:-.025em;margin-bottom:16px;max-width:20ch}
-.lead{color:var(--t2);max-width:56ch;margin-bottom:48px}
+.b1{--c:#1f4fd8;--t:#e8eeff}.b2{--c:#d63a2b;--t:#ffe9e5}.b3{--c:#a86400;--t:#fff1cc}.b4{--c:#0c8556;--t:#dff4e8}
+/* motion */
+@keyframes up{from{opacity:0;transform:translateY(20px)}}
+@keyframes rise{from{clip-path:inset(100% 0 0 0)}}
+@keyframes grow{from{transform:scaleY(0)}}
+@keyframes ln{from{opacity:0;transform:translateX(-8px)}}
+@keyframes mk{from{background-size:0 38%}}
+@keyframes in{from{opacity:0;transform:translateY(10px)}}
+.up{animation:up .9s var(--ease) both;animation-delay:var(--w,0s)}
+.js .rv{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:calc(var(--d,0)*90ms)}
+.js .rv.in{opacity:1;transform:none}
+#bar{position:fixed;top:0;left:0;right:0;height:3px;background:var(--acc);transform:scaleX(0);transform-origin:0 50%;z-index:10}
+/* labels, headings */
+.k{font:400 13px/1 var(--mono);color:var(--t3);margin-bottom:16px}.k b{color:var(--blue);font-weight:500;margin-right:8px}
+section{padding:120px 0}
+h2{font-size:clamp(34px,4.6vw,48px);letter-spacing:-.03em;margin-bottom:16px;max-width:20ch}
+.lead{color:var(--t2);max-width:56ch;margin-bottom:56px}
 /* nav */
-nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid transparent;transition:border-color .3s}nav.sc{border-color:var(--line)}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
-nav .logo{font:500 17px var(--mono);text-decoration:none;letter-spacing:-.01em}nav .logo i{color:var(--acc);font-style:normal}
+nav .logo{font:500 17px var(--mono);text-decoration:none}nav .logo i{color:var(--blue);font-style:normal}
 nav ul{display:flex;gap:4px;list-style:none;padding:0;font-size:15px;color:var(--t2)}
-nav ul a{text-decoration:none;padding:8px 12px;border-radius:8px;transition:color .15s var(--ease),background-color .15s var(--ease)}nav ul a:hover{color:var(--t1);background:var(--s1)}
+nav ul a{text-decoration:none;padding:8px 12px;border-radius:8px;transition:color .2s,background-color .2s}nav ul a:hover{color:var(--ink);background:var(--s2)}
 .nbtn{margin-left:8px}
 /* buttons */
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--line2);transition:background-color .15s var(--ease),border-color .15s var(--ease)}
-.btn:hover{background:var(--s2)}.btn:active{transform:scale(.98)}
-.btn.p{background:var(--acc);border-color:var(--acc);color:var(--ink)}.btn.p:hover{background:#ffc933;border-color:#ffc933}
+.btn{display:inline-flex;gap:8px;padding:12px 22px;border-radius:999px;font-weight:500;font-size:15px;text-decoration:none;border:1px solid var(--line2);transition:background-color .2s,color .2s,border-color .2s,transform .15s}
+.btn:hover{background:var(--s2)}.btn:active{transform:scale(.97)}.btn .a{display:inline-block;transition:transform .25s var(--ease)}.btn:hover .a{transform:translateX(4px)}
+.btn.p{background:var(--ink);border-color:var(--ink);color:#fff}.btn.p:hover{background:#262c5c}
 /* hero */
-.hero{padding:96px 0 112px}
+.hero{padding:88px 0 120px}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
-.role{font:400 14px/1 var(--mono);color:var(--acc);margin-bottom:24px;display:flex;align-items:center;gap:8px}
+.role{font:400 14px/1 var(--mono);color:var(--blue);margin-bottom:24px;display:flex;align-items:center;gap:8px}
 .role:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc)}
-h1{font-size:clamp(40px,6vw,68px);letter-spacing:-.035em;max-width:14ch}
-.hero p{font-size:20px;color:var(--t2);max-width:44ch;margin:24px 0 40px}
-.vis{position:relative;padding-bottom:56px}
-.vis img{display:block;width:100%;max-width:400px;margin-left:auto;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:20px;border:1px solid var(--line2)}
-.code{position:absolute;left:-48px;bottom:0;width:380px;max-width:calc(100% + 24px);background:var(--s1);border:1px solid var(--line2);border-radius:14px;padding:20px 24px;font:400 13px/1.8 var(--mono);color:var(--t2);box-shadow:0 16px 40px rgba(0,0,0,.4);overflow-x:auto}
-.code .c{color:var(--t3)}.code .p{color:#8aa0cf}.code .s{color:var(--t1)}.code .n{color:var(--acc)}
+h1{font-size:clamp(44px,6.4vw,76px);letter-spacing:-.04em;max-width:12ch}
+.mark{background:linear-gradient(var(--acc),var(--acc)) 0 88%/100% 38% no-repeat;animation:mk .9s 1s var(--ease) both}
+.hero p{font-size:20px;color:var(--t2);max-width:44ch;margin:28px 0 40px}
+.vis{position:relative;padding-bottom:64px;max-width:440px;margin-left:auto;width:100%}
+.vis:before{content:"";position:absolute;inset:40px -20px 64px 24px;background:var(--acc);border-radius:220px 220px 20px 20px;transform-origin:50% 100%;animation:grow 1s .1s var(--ease) both}
+.vis img{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:220px 220px 20px 20px;animation:rise 1.1s .25s var(--ease) both}
+.code{position:absolute;left:-56px;bottom:0;width:380px;max-width:calc(100% + 40px);background:var(--ink);border-radius:16px;padding:20px 24px;font:400 13px/1.8 var(--mono);color:#b9bfd6;box-shadow:0 20px 40px rgba(15,19,48,.2);overflow-x:auto}
+.ln{display:block;animation:ln .5s var(--ease) both;animation-delay:calc(1.1s + var(--i)*.12s)}
+.code .c{color:#7078a0}.code .p{color:#93b2ff}.code .s{color:#fff}.code .n{color:var(--acc)}
 /* stats */
-.stats{border-block:1px solid var(--line)}
+.stats{background:var(--s1);border-block:1px solid var(--line)}
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
-.stats div{padding:32px 24px;border-left:1px solid var(--line)}.stats div:first-child{border-left:0}
-.stats b{display:block;font:500 40px/1 var(--mono);letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin-bottom:8px}.stats span{color:var(--t2);font-size:15px}
+.stats .wrap>div{padding:40px 24px;border-left:1px solid var(--line)}.stats .wrap>div:first-child{border-left:0}
+.stats b{display:block;font:500 44px/1 var(--mono);letter-spacing:-.03em;font-variant-numeric:tabular-nums;margin-bottom:8px}.stats span{color:var(--t2);font-size:15px}
 /* facettes */
 .facets{display:grid;grid-template-columns:260px 1fr;gap:32px;align-items:start}
 .tabs{display:flex;flex-direction:column;gap:4px}
-.tabs button{font:500 16px Geist,sans-serif;text-align:left;padding:12px 16px;border-radius:10px;border:1px solid transparent;background:none;color:var(--t2);cursor:pointer;display:flex;gap:12px;align-items:center;transition:color .15s var(--ease),background-color .15s var(--ease)}
-.tabs button i{font:400 12px var(--mono);color:var(--t3);font-style:normal;width:20px}
-.tabs button:hover{color:var(--t1);background:var(--s1)}
-.tabs button[aria-selected=true]{background:var(--s2);border-color:var(--line2);color:var(--t1)}
-.tabs button[aria-selected=true] i{color:var(--acc)}
-.panel{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:32px;display:none}
-.panel.on{display:block;animation:in .3s var(--ease)}
-@keyframes in{from{opacity:0;transform:translateY(8px)}}
-.panel h3{font-size:28px;letter-spacing:-.02em;margin-bottom:12px}.panel p{color:var(--t2);margin-bottom:24px;max-width:60ch}
-.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin-bottom:24px}
-.tags li{padding:4px 12px;border-radius:6px;border:1px solid var(--line2);color:var(--t2);font:400 13px/1.6 var(--mono)}
-.panel.dev .tags li{color:var(--t1);border-color:rgba(245,180,0,.4)}
+.tabs button{font:500 16px Geist,sans-serif;text-align:left;padding:12px 16px;border-radius:12px;border:1px solid transparent;background:none;color:var(--t2);cursor:pointer;display:flex;gap:12px;align-items:center;transition:color .25s,background-color .25s}
+.tabs button i{font:400 12px var(--mono);color:var(--t3);font-style:normal;width:20px;transition:color .25s}
+.tabs button:hover{color:var(--ink);background:var(--s2)}
+.tabs button[aria-selected=true]{background:var(--t);color:var(--ink)}.tabs button[aria-selected=true] i{color:var(--c)}
+.panel{background:var(--t);border-radius:20px;padding:40px;display:none}
+.panel.on{display:block;animation:in .45s var(--ease)}
+.panel h3{font-size:30px;letter-spacing:-.02em;margin-bottom:12px}.panel p{color:var(--t2);margin-bottom:24px;max-width:60ch}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin-bottom:28px}
+.tags li{padding:4px 12px;border-radius:999px;background:rgba(255,255,255,.75);color:var(--ink);font:400 13px/1.6 var(--mono)}
+.dev .tags li{background:var(--s1);box-shadow:inset 0 0 0 1px var(--c)}
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
-.gal img{width:100%;height:170px;object-fit:cover;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:border-color .15s var(--ease)}
-.gal img:hover{border-color:var(--line2)}.gal .fit{object-fit:contain;background:#fff}
+.gal img{width:100%;height:170px;object-fit:cover;border-radius:12px;display:block;cursor:zoom-in;background:var(--s1);transition:transform .3s var(--ease)}
+.gal img:hover{transform:translateY(-3px)}.gal .fit{object-fit:contain;background:#fff}
+.panel.on .gal img{animation:in .6s var(--ease) both}.gal img:nth-child(2){animation-delay:.07s!important}.gal img:nth-child(3){animation-delay:.14s!important}.gal img:nth-child(4){animation-delay:.21s!important}.gal img:nth-child(5){animation-delay:.28s!important}
 /* projets */
+.alt{background:var(--s1);border-block:1px solid var(--line)}
 .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:var(--s1);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .15s var(--ease)}
-.card:hover{border-color:var(--line2)}.card.w{grid-column:span 2}
-.shot{height:176px;background:var(--s2);display:flex;align-items:flex-end;padding:20px;border-bottom:1px solid var(--line);font:400 14px var(--mono);color:var(--t2)}
-.shot span{color:var(--acc);margin-right:8px}
-.shot.im{padding:0;display:block}.shot img{width:100%;height:100%;object-fit:cover;display:block}
-.card .b{padding:24px;display:flex;flex-direction:column;gap:8px;flex:1}.card h3{font-size:20px;letter-spacing:-.01em}.card p{color:var(--t2);font-size:15px;flex:1}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s,transform .3s var(--ease)}
+.card:hover{border-color:var(--line2);transform:translateY(-4px)}.card.w{grid-column:span 2}
+.shot{height:184px;background:var(--t,var(--s2));display:flex;align-items:flex-end;padding:20px;font:400 14px var(--mono);color:var(--ink);overflow:hidden}
+.shot span{color:var(--c,var(--blue));margin-right:8px}
+.shot.im{padding:0;display:block}.shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s var(--ease)}.card:hover .shot img{transform:scale(1.04)}
+.card .b{padding:24px;display:flex;flex-direction:column;gap:8px;flex:1}.card h3{font-size:21px;letter-spacing:-.015em}.card p{color:var(--t2);font-size:15px;flex:1}
 .card .m{font:400 12px var(--mono);color:var(--t3);flex:0}
-.card a{font:500 14px var(--mono);color:var(--acc);text-decoration:none;margin-top:8px}.card a:hover{text-decoration:underline;text-underline-offset:4px}
+.card a{font:500 14px var(--mono);color:var(--blue);text-decoration:none;margin-top:8px}.card a:hover{text-decoration:underline;text-underline-offset:4px}
 /* parcours */
-.two{display:grid;grid-template-columns:1.1fr .9fr;gap:64px}
-.tl{list-style:none;padding:0 0 0 32px;border-left:1px solid var(--line2)}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:72px}
+.tl{list-style:none;padding:0 0 0 32px;position:relative}
+.tl:before{content:"";position:absolute;left:0;top:10px;bottom:16px;width:1px;background:var(--line2);transform:scaleY(0);transform-origin:top;transition:transform 1.6s var(--ease)}.tl.in:before{transform:scaleY(1)}
 .tl li{position:relative;padding:0 0 32px;color:var(--t2);font-size:16px}
-.tl li:before{content:"";position:absolute;left:-37px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--t3)}
-.tl li:first-child:before{background:var(--acc);border-color:var(--acc)}
-.tl small{display:block;font:400 13px var(--mono);color:var(--t3);margin-bottom:4px}.tl b{display:block;font-size:19px;font-weight:500;color:var(--t1)}
-.medal{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:24px;color:var(--t2);font-size:16px}
-.medal small{display:block;font:400 13px var(--mono);color:var(--acc);margin-bottom:8px}.medal h3{font-size:22px;color:var(--t1);margin-bottom:4px}
-.info{margin-top:24px;color:var(--t2);font-size:16px}.info b{display:block;font:400 13px var(--mono);color:var(--t3);margin-bottom:4px;font-weight:400}
-.coach{display:block;width:100%;height:260px;object-fit:cover;object-position:top;border-radius:16px;border:1px solid var(--line);margin-top:32px}
+.tl li:before{content:"";position:absolute;left:-36px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1px solid var(--t3)}
+.tl li:first-child:before{background:var(--acc);border-color:var(--ink)}
+.tl small{display:block;font:400 13px var(--mono);color:var(--t3);margin-bottom:4px}.tl b{display:block;font-size:19px;font-weight:500;color:var(--ink)}
+.medal{background:var(--acc);border-radius:20px;padding:28px;font-size:16px}
+.medal small{display:block;font:400 13px var(--mono);margin-bottom:8px}.medal h3{font-size:24px;margin-bottom:4px;letter-spacing:-.02em}
+.q{font-size:24px;line-height:1.35;letter-spacing:-.02em;margin-top:40px;max-width:24ch}.q small{display:block;font:400 13px var(--mono);color:var(--t3);margin-top:12px;letter-spacing:0}
+.info{margin-top:32px;color:var(--t2);font-size:16px}.info b{display:block;font:400 13px var(--mono);color:var(--t3);margin-bottom:4px}
+.coach{display:block;width:100%;height:260px;object-fit:cover;object-position:top;border-radius:20px;margin-top:32px}
 /* contact */
-.contact{background:var(--s1);border:1px solid var(--line);border-radius:24px;padding:80px 32px;text-align:center}
-.contact h2{margin:0 auto 16px}.contact p{color:var(--t2);margin:0 auto 32px;max-width:46ch}
-.contact .btns{justify-content:center}
-.links{display:flex;justify-content:center;gap:24px;margin-top:32px;font:400 14px var(--mono)}.links a{color:var(--t2);text-decoration:none;transition:color .15s var(--ease)}.links a:hover{color:var(--acc)}
-footer{padding:40px 0;text-align:center;color:var(--t3);font:400 13px var(--mono);border-top:1px solid var(--line)}
-#lb{position:fixed;inset:0;background:rgba(5,6,8,.92);display:none;place-items:center;z-index:9;cursor:zoom-out;padding:20px}
-#lb.on{display:grid}#lb img{max-width:100%;max-height:92vh;border-radius:12px}
+.contact{background:var(--acc);border-radius:32px;padding:96px 32px;text-align:center}
+.contact h2{margin:0 auto 16px;max-width:14ch}.contact p{margin:0 auto 32px;max-width:46ch;color:rgba(15,19,48,.75)}
+.contact .btns{justify-content:center}.contact .btn:not(.p){border-color:rgba(15,19,48,.35)}.contact .btn:not(.p):hover{background:rgba(255,255,255,.4)}
+.links{display:flex;justify-content:center;gap:24px;margin-top:32px;font:400 14px var(--mono)}.links a{text-decoration:none;transition:opacity .2s}.links a:hover{opacity:.6}
+footer{padding:40px 0;text-align:center;color:var(--t3);font:400 13px var(--mono)}
+#lb{position:fixed;inset:0;background:rgba(15,19,48,.9);display:none;place-items:center;z-index:9;cursor:zoom-out;padding:20px}
+#lb.on{display:grid;animation:in .3s}#lb img{max-width:100%;max-height:92vh;border-radius:12px}
 @media(max-width:900px){
-.hero .wrap,.facets,.two{grid-template-columns:1fr}.hero .wrap{gap:48px}.hero{padding:64px 0 72px}
+.hero .wrap,.facets,.two{grid-template-columns:1fr}.hero .wrap{gap:48px}.hero{padding:56px 0 72px}
 .tabs{flex-direction:row;overflow-x:auto;padding-bottom:8px}.tabs button{white-space:nowrap}
-nav ul{display:none}section{padding:72px 0}
-.vis{padding-bottom:0}.vis img{max-width:none;margin:0}.code{position:static;width:100%;margin-top:16px;box-shadow:none}
-.stats .wrap{grid-template-columns:1fr 1fr}.stats div:nth-child(3){border-left:0}.stats div:nth-child(n+3){border-top:1px solid var(--line)}
-.proj{grid-template-columns:1fr}.card.w{grid-column:auto}.two{gap:48px}.panel{padding:24px}.contact{padding:56px 24px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+nav ul{display:none}section{padding:80px 0}
+.vis{padding-bottom:0;margin:0 auto}.vis:before{inset:32px 0 auto 24px;aspect-ratio:4/4.9}.code{position:static;width:100%;max-width:none;margin-top:16px;box-shadow:none}
+.stats .wrap{grid-template-columns:1fr 1fr}.stats .wrap>div:nth-child(3){border-left:0}.stats .wrap>div:nth-child(n+3){border-top:1px solid var(--line)}
+.proj{grid-template-columns:1fr}.card.w{grid-column:auto}.two{gap:48px}.panel{padding:24px}.contact{padding:64px 24px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important;transition:none!important}.js .rv{opacity:1;transform:none}.tl:before{transform:none}}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><a class="logo" href="#top">kelly<i>.</i>hanil</a><div style="display:flex;align-items:center"><ul><li><a href="#facettes">Facettes</a><li><a href="#projets">Projets</a><li><a href="#parcours">Parcours</a></ul><a class="btn nbtn" href="#contact">Contact</a></div></div></nav>
+<div id="bar"></div>
+<nav id="nav"><div class="wrap"><a class="logo" href="#top">kelly<i>.</i>hanil</a><div style="display:flex;align-items:center"><ul><li><a href="#facettes">Facettes</a><li><a href="#projets">Projets</a><li><a href="#parcours">Parcours</a></ul><a class="btn p nbtn" href="#contact">Contact</a></div></div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-<div><div class="role">Développeur freelance · Kinshasa, RDC</div>
-<h1>Kelly Tshinefu Nsio Hanil</h1>
-<p>Je conçois des sites, des applications et des outils de gestion, du prototype à la mise en production. Je code, je filme, je communique et j’entraîne, pour faire le lien entre la technologie et les gens.</p>
-<div class="btns"><a class="btn p" href="#projets">Voir mes projets</a><a class="btn" href="#contact">Me contacter</a></div></div>
+<div><div class="role up">Développeur freelance · Kinshasa, RDC</div>
+<h1 class="up" style="--w:.1s">Kelly Tshinefu Nsio <span class="mark">Hanil</span></h1>
+<p class="up" style="--w:.25s">Je conçois des sites, des applications et des outils de gestion, du prototype à la mise en production. Je code, je filme, je communique et j’entraîne, pour faire le lien entre la technologie et les gens.</p>
+<div class="btns up" style="--w:.4s"><a class="btn p" href="#projets">Voir mes projets <span class="a">→</span></a><a class="btn" href="#contact">Me contacter</a></div></div>
 <div class="vis"><img src="assets/hero.jpg" alt="Portrait de Kelly Hanil, assis en chemise verte" width="420" height="525">
-<pre class="code" aria-label="Aperçu du profil développeur"><code><span class="c">// kelly.ts</span>
-<span class="p">const</span> kelly = {
-  role: <span class="s">"Développeur"</span>,
-  depuis: <span class="n">2021</span>,
-  stack: [<span class="s">"Python"</span>, <span class="s">"JavaScript"</span>, <span class="s">"C++"</span>],
-  cibles: [<span class="s">"web"</span>, <span class="s">"mobile"</span>, <span class="s">"desktop"</span>],
-  base: <span class="s">"Kinshasa"</span>,
-}</code></pre></div>
+<pre class="code" aria-label="Aperçu du profil développeur"><code><span class="ln" style="--i:0"><span class="c">// kelly.ts</span></span><span class="ln" style="--i:1"><span class="p">const</span> kelly = {</span><span class="ln" style="--i:2">  role: <span class="s">"Développeur"</span>,</span><span class="ln" style="--i:3">  depuis: <span class="n">2021</span>,</span><span class="ln" style="--i:4">  stack: [<span class="s">"Python"</span>, <span class="s">"JavaScript"</span>, <span class="s">"C++"</span>],</span><span class="ln" style="--i:5">  cibles: [<span class="s">"web"</span>, <span class="s">"mobile"</span>, <span class="s">"desktop"</span>],</span><span class="ln" style="--i:6">  base: <span class="s">"Kinshasa"</span>,</span><span class="ln" style="--i:7">}</span></code></pre></div>
 </div></header>
-<div class="stats"><div class="wrap"><div><b>5 ans</b><span>de pratique</span></div><div><b>6</b><span>métiers</span></div><div><b>6+</b><span>projets livrés</span></div><div><b>1</b><span>médaille d’or</span></div></div></div>
+<div class="stats"><div class="wrap"><div><b data-n="5" data-s=" ans">5 ans</b><span>de pratique</span></div><div><b data-n="6">6</b><span>métiers</span></div><div><b data-n="6" data-s="+">6+</b><span>projets livrés</span></div><div><b data-n="1">1</b><span>médaille d’or</span></div></div></div>
 
 <section id="facettes"><div class="wrap">
 <p class="k"><b>01</b>facettes</p>
 <h2>Six métiers, un même fil conducteur</h2>
 <p class="lead">Choisis une facette pour voir ce que je fais, avec quels outils</p>
-<div class="facets">
+<div class="facets rv">
 <div class="tabs" role="tablist" aria-label="Mes facettes">
-<button role="tab" aria-selected="true" aria-controls="p0"><i>01</i>Développeur</button>
-<button role="tab" aria-selected="false" aria-controls="p1"><i>02</i>Community manager</button>
-<button role="tab" aria-selected="false" aria-controls="p2"><i>03</i>Graphiste et vidéo</button>
-<button role="tab" aria-selected="false" aria-controls="p3"><i>04</i>Coach sportif</button>
-<button role="tab" aria-selected="false" aria-controls="p4"><i>05</i>Conseiller digital</button>
-<button role="tab" aria-selected="false" aria-controls="p5"><i>06</i>Traducteur</button>
+<button class="b1" role="tab" aria-selected="true" aria-controls="p0"><i>01</i>Développeur</button>
+<button class="b2" role="tab" aria-selected="false" aria-controls="p1"><i>02</i>Community manager</button>
+<button class="b3" role="tab" aria-selected="false" aria-controls="p2"><i>03</i>Graphiste et vidéo</button>
+<button class="b4" role="tab" aria-selected="false" aria-controls="p3"><i>04</i>Coach sportif</button>
+<button class="b1" role="tab" aria-selected="false" aria-controls="p4"><i>05</i>Conseiller digital</button>
+<button class="b2" role="tab" aria-selected="false" aria-controls="p5"><i>06</i>Traducteur</button>
 </div>
 <div>
-<div class="panel dev on" id="p0" role="tabpanel"><h3>Développeur web, mobile et desktop</h3><p>Freelance depuis 2021. Je conçois des sites, des applications et des outils de gestion pour des institutions, des associations et des entreprises, du prototype à la mise en production.</p><ul class="tags"><li>Python<li>JavaScript<li>Visual Basic<li>C++<li>OJS<li>Apps Script<li>Windows et Linux</ul><div class="gal"><img src="assets/qr.jpg" alt="Affiche MY QR EVENT" loading="lazy"><img src="assets/box.jpg" alt="Présentation de la box de présence biométrique" loading="lazy"><img src="assets/boxlab.jpg" alt="Conception de la box de présence" loading="lazy"><img src="assets/allo.jpg" alt="Logo AlloDocteur" loading="lazy" class="fit"><img src="assets/qrlogo.jpg" alt="Logo MY QR EVENT" loading="lazy" class="fit"></div></div>
-<div class="panel" id="p1" role="tabpanel"><h3>Community manager</h3><p>Plans marketing, contenus pour TikTok, Facebook et Instagram, affiches et banderoles. J’accompagne High Vision All Service, DKC Business et FFPMU-RDC.</p><ul class="tags"><li>Stratégie de contenu<li>Réseaux sociaux<li>Campagnes<li>Affichage</ul><div class="gal"><img src="assets/g1.jpg" alt="Affiche de la grande conférence IAYSP" loading="lazy"><img src="assets/g2.jpg" alt="Affiche des grandes retrouvailles" loading="lazy"></div></div>
-<div class="panel" id="p2" role="tabpanel"><h3>Graphiste et monteur vidéo</h3><p>Identités visuelles, affiches, billets d’entrée et shorts pensés pour les réseaux. Formé à l’infographie chez High Vision.</p><ul class="tags"><li>Photoshop<li>Canva<li>CapCut<li>VN<li>Premiere Pro</ul><div class="gal"><img src="assets/g3.jpg" alt="Étiquette Mbiyayourt" loading="lazy"><img src="assets/g4.jpg" alt="Étiquette Exau Delish yaourt" loading="lazy"><img src="assets/g1.jpg" alt="Affiche conférence IAYSP" loading="lazy"><img src="assets/g2.jpg" alt="Affiche grandes retrouvailles" loading="lazy"><img src="assets/g5.jpg" alt="Logo Mbiya Business" loading="lazy" class="fit"></div></div>
-<div class="panel" id="p3" role="tabpanel"><h3>Coach national de Tong Il Moo Do</h3><p>Entraîneur en clubs et en cours privés, arbitre en compétition. Le sport m’a appris la discipline que j’applique à mes projets.</p><ul class="tags"><li>Arts martiaux<li>Entraînement<li>Arbitrage<li>Fédération congolaise</ul><div class="gal"><img src="assets/coach.jpg" alt="Kelly en tenue de Tong Il Moo Do" loading="lazy"><img src="assets/c1.jpg" alt="Combat lors d’une compétition" loading="lazy"></div></div>
-<div class="panel" id="p4" role="tabpanel"><h3>Conseiller digital junior chez Orange RDC</h3><p>Je traite les retours et l’expérience des clients avec RingCentral Dimelo. Formé à la programmation mobile à l’Orange Digital Center.</p><ul class="tags"><li>Relation client<li>RingCentral Dimelo<li>Orange Digital Center</ul></div>
-<div class="panel" id="p5" role="tabpanel"><h3>Traducteur et interprète anglais–français</h3><p>Transcription, traduction et interprétation en temps réel, y compris en ligne par Zoom, notamment pour la branche FFPMU Cheonshim Won.</p><ul class="tags"><li>Traduction<li>Interprétation<li>Zoom<li>Transcription</ul></div>
+<div class="panel dev b1 on" id="p0" role="tabpanel"><h3>Développeur web, mobile et desktop</h3><p>Freelance depuis 2021. Je conçois des sites, des applications et des outils de gestion pour des institutions, des associations et des entreprises, du prototype à la mise en production.</p><ul class="tags"><li>Python<li>JavaScript<li>Visual Basic<li>C++<li>OJS<li>Apps Script<li>Windows et Linux</ul><div class="gal"><img src="assets/qr.jpg" alt="Affiche MY QR EVENT" loading="lazy"><img src="assets/box.jpg" alt="Présentation de la box de présence biométrique" loading="lazy"><img src="assets/boxlab.jpg" alt="Conception de la box de présence" loading="lazy"><img src="assets/allo.jpg" alt="Logo AlloDocteur" loading="lazy" class="fit"><img src="assets/qrlogo.jpg" alt="Logo MY QR EVENT" loading="lazy" class="fit"></div></div>
+<div class="panel b2" id="p1" role="tabpanel"><h3>Community manager</h3><p>Plans marketing, contenus pour TikTok, Facebook et Instagram, affiches et banderoles. J’accompagne High Vision All Service, DKC Business et FFPMU-RDC.</p><ul class="tags"><li>Stratégie de contenu<li>Réseaux sociaux<li>Campagnes<li>Affichage</ul><div class="gal"><img src="assets/g1.jpg" alt="Affiche de la grande conférence IAYSP" loading="lazy"><img src="assets/g2.jpg" alt="Affiche des grandes retrouvailles" loading="lazy"></div></div>
+<div class="panel b3" id="p2" role="tabpanel"><h3>Graphiste et monteur vidéo</h3><p>Identités visuelles, affiches, billets d’entrée et shorts pensés pour les réseaux. Formé à l’infographie chez High Vision.</p><ul class="tags"><li>Photoshop<li>Canva<li>CapCut<li>VN<li>Premiere Pro</ul><div class="gal"><img src="assets/g3.jpg" alt="Étiquette Mbiyayourt" loading="lazy"><img src="assets/g4.jpg" alt="Étiquette Exau Delish yaourt" loading="lazy"><img src="assets/g1.jpg" alt="Affiche conférence IAYSP" loading="lazy"><img src="assets/g2.jpg" alt="Affiche grandes retrouvailles" loading="lazy"><img src="assets/g5.jpg" alt="Logo Mbiya Business" loading="lazy" class="fit"></div></div>
+<div class="panel b4" id="p3" role="tabpanel"><h3>Coach national de Tong Il Moo Do</h3><p>Entraîneur en clubs et en cours privés, arbitre en compétition. Le sport m’a appris la discipline que j’applique à mes projets.</p><ul class="tags"><li>Arts martiaux<li>Entraînement<li>Arbitrage<li>Fédération congolaise</ul><div class="gal"><img src="assets/coach.jpg" alt="Kelly en tenue de Tong Il Moo Do" loading="lazy"><img src="assets/c1.jpg" alt="Combat lors d’une compétition" loading="lazy"></div></div>
+<div class="panel b1" id="p4" role="tabpanel"><h3>Conseiller digital junior chez Orange RDC</h3><p>Je traite les retours et l’expérience des clients avec RingCentral Dimelo. Formé à la programmation mobile à l’Orange Digital Center.</p><ul class="tags"><li>Relation client<li>RingCentral Dimelo<li>Orange Digital Center</ul></div>
+<div class="panel b2" id="p5" role="tabpanel"><h3>Traducteur et interprète anglais–français</h3><p>Transcription, traduction et interprétation en temps réel, y compris en ligne par Zoom, notamment pour la branche FFPMU Cheonshim Won.</p><ul class="tags"><li>Traduction<li>Interprétation<li>Zoom<li>Transcription</ul></div>
 </div></div></div></section>
 
-<section id="projets" style="border-top:1px solid var(--line)"><div class="wrap">
+<section id="projets" class="alt"><div class="wrap">
 <p class="k"><b>02</b>projets</p>
 <h2>Projets réalisés</h2>
 <p class="lead">Des plateformes utilisées au quotidien par des étudiants, des chercheurs et des membres d’associations</p>
 <div class="proj">
-<article class="card w"><div class="shot"><span>›</span>revue.unikin-flsh.com</div><div class="b"><p class="m">OJS · production</p><h3>Revue UNIKIN-FLSH</h3><p>Plateforme de revue scientifique sous OJS : mise en place, thème personnalisé et déploiement en production</p><a href="https://revue.unikin-flsh.com" target="_blank" rel="noopener">Visiter le site ↗</a></div></article>
-<article class="card"><div class="shot"><span>›</span>fac.unikin-flsh.com</div><div class="b"><p class="m">Site web · administration</p><h3>Faculté des Lettres et Sciences Humaines</h3><p>Gestion du site et panneau d’administration pour publier les actualités et les annonces</p><a href="https://fac.unikin-flsh.com" target="_blank" rel="noopener">Visiter le site ↗</a></div></article>
-<article class="card"><div class="shot"><span>›</span>Google Sheets + Apps Script</div><div class="b"><p class="m">Apps Script</p><h3>Gestion des membres FFPMU-RDC</h3><p>Système sur Google Sheets et Apps Script pour suivre les membres de la fédération</p></div></article>
+<article class="card w b1"><div class="shot"><span>›</span>revue.unikin-flsh.com</div><div class="b"><p class="m">OJS · production</p><h3>Revue UNIKIN-FLSH</h3><p>Plateforme de revue scientifique sous OJS : mise en place, thème personnalisé et déploiement en production</p><a href="https://revue.unikin-flsh.com" target="_blank" rel="noopener">Visiter le site ↗</a></div></article>
+<article class="card b4"><div class="shot"><span>›</span>fac.unikin-flsh.com</div><div class="b"><p class="m">Site web · administration</p><h3>Faculté des Lettres et Sciences Humaines</h3><p>Gestion du site et panneau d’administration pour publier les actualités et les annonces</p><a href="https://fac.unikin-flsh.com" target="_blank" rel="noopener">Visiter le site ↗</a></div></article>
+<article class="card b2"><div class="shot"><span>›</span>Google Sheets + Apps Script</div><div class="b"><p class="m">Apps Script</p><h3>Gestion des membres FFPMU-RDC</h3><p>Système sur Google Sheets et Apps Script pour suivre les membres de la fédération</p></div></article>
 <article class="card"><div class="shot im"><img src="assets/qr.jpg" alt="MY QR EVENT"></div><div class="b"><p class="m">SaaS · QR code</p><h3>MY QR EVENT</h3><p>SaaS de gestion d’événements par QR code, pour contrôler les entrées et les invités</p></div></article>
-<article class="card"><div class="shot"><span>›</span>application mobile</div><div class="b"><p class="m">Mobile</p><h3>Fast-Print</h3><p>Application mobile fonctionnelle, conçue et développée de bout en bout</p></div></article>
+<article class="card b3"><div class="shot"><span>›</span>application mobile</div><div class="b"><p class="m">Mobile</p><h3>Fast-Print</h3><p>Application mobile fonctionnelle, conçue et développée de bout en bout</p></div></article>
 <article class="card"><div class="shot"><span>›</span>billets standard et VIP</div><div class="b"><p class="m">Design</p><h3>Billet d’entrée MK Village</h3><p>Refonte graphique des billets standard et VIP du site MK Village Ditalaji, à Limete</p></div></article>
 <article class="card w"><div class="shot im"><img src="assets/box.jpg" alt="Box de présence biométrique"></div><div class="b"><p class="m">Biométrie · matériel</p><h3>Box de présence biométrique</h3><p>Solution de gestion de présence par identification biométrique, de la conception du boîtier à la présentation</p></div></article>
 </div></div></section>
 
-<section id="parcours" style="border-top:1px solid var(--line)"><div class="wrap">
+<section id="parcours"><div class="wrap">
 <p class="k"><b>03</b>parcours</p>
 <h2>Parcours</h2><p class="lead">Cinq ans de pratique, en parallèle d’un baccalauréat en génie logiciel</p>
 <div class="two"><ul class="tl">
@@ -171,23 +183,39 @@ nav ul{display:none}section{padding:72px 0}
 <li><small>2023 et 2026</small><b>Responsable de laboratoires informatiques</b>Institut Song-hwa, puis laboratoire multimédia de la FLSH</li>
 <li><small>Depuis août 2026</small><b>Conseiller digital junior</b>DEC Orange RDC</li></ul>
 <div><div class="medal"><small>2021</small><h3>Médaille d’or, GIJOUM</h3>Compétition internationale Open Mombasa, Kenya</div>
+<p class="q">“Le sport m’a appris la discipline que j’applique à mes projets”<small>Tong Il Moo Do</small></p>
 <p class="info"><b>formations</b>Entrepreneuriat (UNICEF), infographie (High Vision), programmation mobile (Orange Digital Center), éducation du caractère (IAYSP RDC), anglais (Cisco Skills for All)</p>
 <p class="info"><b>langues</b>Français, langue maternelle. Anglais professionnel. Lingala, notions.</p><img class="coach" src="assets/coach.jpg" alt="Kelly en tenue de Tong Il Moo Do"></div></div>
 </div></section>
 
 <section id="contact" style="padding-top:0"><div class="wrap"><div class="contact">
 <h2>Un projet à lancer ?</h2><p>Site, application, campagne ou formation : écris-moi, je réponds rapidement</p>
-<div class="btns"><a class="btn p" href="mailto:Hanilkelly2gen@gmail.com">Envoyer un e-mail</a><a class="btn" href="https://wa.me/243842567840" target="_blank" rel="noopener">WhatsApp</a></div>
+<div class="btns"><a class="btn p" href="mailto:Hanilkelly2gen@gmail.com">Envoyer un e-mail <span class="a">→</span></a><a class="btn" href="https://wa.me/243842567840" target="_blank" rel="noopener">WhatsApp</a></div>
 <div class="links"><a href="https://github.com/han-one" target="_blank" rel="noopener">github.com/han-one</a><a href="https://www.linkedin.com/in/kelly-han-il-979156445" target="_blank" rel="noopener">LinkedIn</a></div>
 </div></div></section>
 <footer>© 2026 Kelly Tshinefu Nsio Hanil · Kinshasa, RDC</footer>
 
 <script>
-const tabs=document.querySelectorAll('[role=tab]'),panels=document.querySelectorAll('.panel');
+const $=s=>document.querySelectorAll(s),still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* onglets */
+const tabs=$('[role=tab]'),panels=$('.panel');
 tabs.forEach((t,i)=>t.addEventListener('click',()=>{tabs.forEach((x,j)=>{x.setAttribute('aria-selected',i===j);panels[j].classList.toggle('on',i===j)})}));
+/* lightbox */
 const lb=document.createElement('div');lb.id='lb';document.body.append(lb);
-document.querySelectorAll('.gal img').forEach(i=>i.addEventListener('click',()=>{lb.innerHTML='<img src="'+i.src+'" alt="'+i.alt+'">';lb.classList.add('on')}));
+$('.gal img').forEach(i=>i.addEventListener('click',()=>{lb.innerHTML='<img src="'+i.src+'" alt="'+i.alt+'">';lb.classList.add('on')}));
 lb.addEventListener('click',()=>lb.classList.remove('on'));addEventListener('keydown',e=>e.key==='Escape'&&lb.classList.remove('on'));
+/* apparition au scroll */
+const count=el=>{const n=+el.dataset.n,s=el.dataset.s||'',t0=performance.now();(function f(t){const p=Math.min((t-t0)/1100,1),v=Math.round(n*(1-Math.pow(1-p,3)));el.textContent=v+s;if(p<1)requestAnimationFrame(f)})(t0)};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;io.unobserve(el);el.classList.add('in');
+ if(el.matches('.rv'))setTimeout(()=>el.classList.remove('rv','in'),1400);
+ if(el.matches('.stats .wrap>div'))count(el.querySelector('b'))}),{threshold:.15});
+$('.k,section h2,.lead,.facets,.card,.tl li,.medal,.q,.info,.coach,.contact>*,.stats .wrap>div').forEach(el=>{
+ if(!still)el.classList.add('rv');
+ el.style.setProperty('--d',Math.min([...el.parentNode.children].indexOf(el),5));io.observe(el)});
+$('.tl').forEach(t=>io.observe(t));
+/* progression + nav */
+const bar=document.getElementById('bar'),nav=document.getElementById('nav');let tick=0;
+addEventListener('scroll',()=>{if(tick)return;tick=requestAnimationFrame(()=>{const h=document.documentElement;bar.style.transform='scaleX('+(scrollY/(h.scrollHeight-innerHeight||1))+')';nav.classList.toggle('sc',scrollY>8);tick=0})},{passive:true});
 </script>
 </body>
 </html>
